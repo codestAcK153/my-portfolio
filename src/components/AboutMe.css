@@ -1,0 +1,155 @@
+/* General styling for the About Me section */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-me {
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  padding: 0 20px; /* Add padding for responsiveness */
+}
+
+/* Container for alignment */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Intro section for text and image alignment */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Controls the maximum width of the section */
+}
+
+/* Intro Text Section */
+.intro-text {
+  flex-grow: 1;
+  max-width: 600px;
+  padding-right: 20px; /* Space between the text and image */
+  padding-left: 20px;
+  font-size: 1.2rem; /* Adjusted from incorrect 100px */
+}
+
+h1 {
+  font-size: 3.0rem;
+  margin-bottom: 1px;
+}
+
+h2 {
+  font-size: 2.9rem;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.typed-text {
+  color: #b834ff;
+}
+
+/* About Me Button */
+.about-me-button {
+  background-color: #000080;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.about-me-button:hover {
+  background-color: #4169e1;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: #a400ff;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #a400ff; /* Change the color on hover, e.g., for LinkedIn */
+}
+
+/* Intro Image Section */
+.intro-image {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 28em; /* Adjusted from 35em to better balance with text */
+  height: 28em; /* Adjusted height for better proportion */
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .intro {
+    flex-direction: column-reverse; /* Stack content vertically on smaller screens */
+    text-align: center;
+  }
+  .social-icons{
+    justify-content: center;
+  }
+
+  
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+  .intro-text {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+}

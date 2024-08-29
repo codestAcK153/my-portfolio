@@ -1,0 +1,196 @@
+.App {
+  text-align: center;
+  background-color: var(--background);
+}
+
+.projects {
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 120vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 0; /* Adjust for fixed navbar */
+  padding-bottom: 0;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%; /* Ensure the container takes the full width */
+  padding: 0 0.75em; /* Add padding to the container */
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.875em;
+  color: #a400ff; /* Updated color for the heading */
+  text-shadow: 0 0 0.625em rgba(0, 0, 0, 0.28);
+}
+
+.projects-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.875em;
+  color: #aaaaaa;
+}
+
+.slick-slider {
+  width: 100%;
+}
+
+.slick-dots {
+  bottom: -1.875em;
+}
+
+.slick-dots li button:before {
+  color: #ffffff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #a400ff;
+}
+
+.project-card {
+  background-color: var(--card);
+  border-radius: 0.625em;
+  overflow: hidden;
+  margin: 1.0em;
+  transition: transform 0.3s ease-in-out;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+  justify-content: left;
+  width: 15.75em; /* Adjust the width of the cards */
+  max-height: 40em; /* Set a fixed height for the cards */
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+}
+
+.project-image img {
+  width: 100%;
+  height: 8.5em; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure the images cover the area */
+  border-radius: 0.625em;
+}
+
+.project-info {
+  padding: 0.625em;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-info h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--design);
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  margin: 0.625em 0;
+  flex-grow: 1;
+  overflow: hidden; /* Ensure content doesn't stretch the card height */
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.625em;
+
+}
+
+.project-links a {
+  color: #c153fd;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.625em 1.25em;
+  border: 0.125em solid #b534fa;
+  border-radius: 0.3125em;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 0.078125em; /* Reduced gap between the links */
+}
+
+.project-links a:last-child {
+  margin-right: 0; /* Ensure the last link has no right margin */
+}
+
+.project-links a:hover {
+  background-color: #a400ff;
+  color: #ffffff;
+}
+
+/* Mobile view */
+.mobile-view {
+  display: none;
+}
+
+/* Desktop view */
+.desktop-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25em;
+  max-width: 75em;
+  width: 100%;
+}
+.mobile-view {
+  display: none;
+}
+
+/* Desktop view */
+.desktop-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .mobile-view {
+    display: block;
+  }
+  .project-links a:hover {
+    background-color: #a400ff;
+    color: #ffffff;
+  }  
+  .desktop-view {
+    display: none;
+  }
+
+  .project-card {
+    margin: 1.25em auto; /* Center the card */
+    width: 90%; /* Ensure the card fits well on mobile view */
+    max-width: none; /* Remove max-width for mobile view */
+  }
+
+  .projects-container {
+    flex-direction: column; /* Stack cards vertically on mobile */
+    padding: 0 0.625em; /* Add padding to ensure cards don't touch the edges */
+  }
+
+  .container {
+    padding: 0 0.625em; /* Ensure the container has padding on mobile */
+  }
+}

@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+  background-color: var(--background);
+}
+
+.contact-me {
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2.75em;
+}
+
+.contact-me-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.875em;
+  color: #992add; /* Customize color as needed */
+  text-shadow: 0 0 0.625em rgba(0, 0, 0, 0.28);
+}
+
+.contact-me-container {
+  width: 100%;
+  max-width: 37.5em; /* Increased the size of the container */
+  padding: 1.25em;
+  background-color: var(--card);
+  border-radius: 0.625em;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.472);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-me-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0.2em;
+}
+
+.contact-me-name-fields {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.625em; /* Add some gap between the input fields */
+}
+
+.contact-me-name-fields input {
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.472);
+  width: 100%; /* Allow the inputs to take the full width of their container */
+}
+
+.contact-me-form input,
+.contact-me-form textarea {
+  width: 100%;
+  padding: 0.9375em;
+  margin-bottom: 1.25em;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.174);
+  background-color: var(--card);
+  border: none;
+  border-radius: 0.3125em;
+  color: var(--text);
+  font-size: 1em;
+  box-sizing: border-box; /* Ensure padding and borders are included in the width */
+}
+
+.contact-me-form textarea {
+  height: 9.375em;
+  resize: none;
+}
+
+.contact-me-form button {
+  padding: 0.9375em;
+  background-color: #992add;
+  border: none;
+  border-radius: 0.3125em;
+  color: #ffffff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-me-form button:hover {
+  background-color: #992add;
+}
+/* Error Message Styling */
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Add basic styling for the submit button when disabled */
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* Mobile view */
+@media (max-width: 768px) {
+  .contact-me{
+    min-height: 111vh;
+  }
+  .mobile-view {
+    display: block;
+  }
+
+  .desktop-view {
+    display: none;
+  }
+  .contact-me-name-fields {
+    flex-direction: column; /* Stack the input fields vertically on mobile */
+    gap: 0.2em; /* Add gap between vertically stacked input fields */
+  }
+  .contact-me-title {
+    font-size: 2.5em;
+  }
+  
+
+}

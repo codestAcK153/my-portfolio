@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap');
+
+:root {
+  --background-dark: #0d0d0d;
+  --background-light: #ffffff;
+  --card-dark: #1a1a1a;
+  --card-light: #f5f5f5;
+  --text-dark: #ffffff;
+  --text-light: #000000;
+  --accent: #a400ff;
+}
+
+body.dark-mode {
+  --background: var(--background-dark);
+  --card: var(--card-dark);
+  --text: var(--text-dark);
+}
+
+body.light-mode {
+  --background: var(--background-light);
+  --card: var(--card-light);
+  --text: var(--text-light);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App {
+  text-align: center;
+  background: var(--background);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Add padding to the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.education {
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 60px; /* Adjust for fixed navbar */
+  padding-bottom: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: var(--accent); /* Customize color as needed */
+  text-shadow: 0 0 0.625em rgba(0, 0, 0, 0.28);
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px; /* Position the line on the left side */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent); /* Color for the timeline line */
+}
+
+.timeline-item {
+  position: relative;
+  width: calc(100% - 40px);
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--card);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+  margin-left: 40px; /* Ensure items are to the right of the line */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.timeline-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 20px;
+  left: -30px; /* Position the icon correctly */
+  width: 20px;
+  height: 20px;
+  background: var(--accent); /* Color for the icon */
+  border-radius: 50%;
+}
+
+.timeline-content {
+  text-align: left;
+}
+
+.timeline-date {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--accent); /* Color for the date */
+}
+
+.timeline-degree {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.timeline-institution {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.timeline-description {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.activities {
+  background-color: var(--card);
+  color: var(--text);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: none; /* Removed box shadow */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.activities h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.activity {
+  background-color: inherit; /* Match the background color of activities */
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.activity-role {
+  display: block;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.activities ul {
+  list-style: none;
+  padding: 0;
+  color: var(--text);
+  margin: 0;
+}
+
+.activities ul li {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+/* Mobile view */
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .education{
+    padding: auto;
+  }
+  .education-title {
+    font-size: 2.2rem; /* Reduce title size for mobile */
+  }
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; /* Align the line with the left corner */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent); /* Color for the timeline line */
+  }
+  
+  /* Update timeline items to compensate for the left-aligned line */
+  .timeline-item {
+    position: relative;
+    width: calc(100% - 40px); /* Adjust the width to avoid overlapping with the line */
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--card);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    margin-left: 40px; /* Ensure items stay aligned with the timeline */
+    box-sizing: border-box;
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    top: 20px;
+    left: -49px; /* Adjust the icon's position to be aligned with the line */
+    width: 20px;
+    height: 20px;
+    background: var(--accent); /* Color for the icon */
+    border-radius: 50%;
+    padding-right: 0em;
+  }
+  
+  .timeline-date {
+    font-size: 1rem; /* Reduce the date size */
+  }
+
+  .timeline-degree {
+    font-size: 1.3rem; /* Reduce the degree size */
+  }
+
+  .timeline-institution {
+    font-size: 1rem; /* Reduce the institution name size */
+  }
+
+  .timeline-description {
+    font-size: 0.9rem; /* Reduce the description size */
+  }
+
+  .activities h4 {
+    font-size: 1rem; /* Reduce activity header size */
+  }
+
+  .activity-role {
+    font-size: 1rem; /* Reduce role text size */
+  }
+
+  .activities ul li {
+    font-size: 0.9rem; /* Reduce activity list items size */
+  }
+
+  .container {
+    padding: 0 10px;
+    width: auto; /* Add more padding to make it look better on mobile */
+  }
+}
